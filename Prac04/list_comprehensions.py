@@ -29,7 +29,7 @@ almost_numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 numbers = [int(number) for number in almost_numbers]
 print(numbers)
 
-# TODO: use a list comprehension to create a list of all of the full_names in lowercase
- #lowercase_full_names = []
+# list comprehension to create a list of first names in uppercase
+# lowercase_full_names = []
 lowercase_full_names = [lowercase_full_name.lower() for lowercase_full_name in full_names]
 print(lowercase_full_names)
