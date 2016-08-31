@@ -9,7 +9,6 @@ MAX_NUMBER = 45
 
 
 def main():
-
     quick_picks = int(input("How many quick picks? "))
     for pick in range(quick_picks):
         ticket_numbers = get_random_numbers()
