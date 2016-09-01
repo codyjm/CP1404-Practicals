@@ -19,9 +19,9 @@ def get_random_numbers():
     numbers = []
 
     for number in range(6):
-        rand_number = random.randint(1, 45)
+        rand_number = random.randint(MIN_NUMBER, MAX_NUMBER)
         while rand_number in numbers:
-            rand_number = random.randint(1, 45)
+            rand_number = random.randint(MIN_NUMBER, MAX_NUMBER)
         numbers.append(rand_number)
 
     numbers.sort()
