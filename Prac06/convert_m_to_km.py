@@ -21,6 +21,7 @@ class ConvertToKm(App):
 
     def handle_increment(self, increment):
         value = self.get_valid_input() + increment
+        self.root.ids.input_miles.text = str(value)
         self.handle_convert()
 
     def get_valid_input(self):
