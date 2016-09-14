@@ -6,10 +6,10 @@ BoxLayout:
             id: input_miles
             text: "1"
             font_size: 40
-            size_hint_x: 3
             multiline: False
         BoxLayout:
             orientation: "vertical"
+            size_hint_x: 0.3
             Button:
                 text: "Up"
                 on_press: app.handle_increment(1)
