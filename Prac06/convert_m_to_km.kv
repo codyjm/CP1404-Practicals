@@ -5,19 +5,26 @@ BoxLayout:
         TextInput:
             id: input_miles
             text: "1"
+            font_size: 40
+            size_hint_x: 3
             multiline: False
         BoxLayout:
             orientation: "vertical"
             Button:
                 text: "Up"
                 on_press: app.handle_increment(1)
+                font_size: 20
             Button:
                 text: "Down"
                 on_press: app.handle_increment(-1)
+                font_size: 20
     Button:
         id: convert_button
         text: "Convert miles to kilometres"
         on_press: app.handle_convert()
+        font_size: 20
     Label:
         id: output_label
         text: "1.60934"
+        font_size: 25
+        color: (0,255,255, 1)
