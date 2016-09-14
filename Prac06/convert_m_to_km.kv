@@ -1,3 +1,24 @@
+<Widget>:
+    color: (0, 0, 0, 1)
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0, 1
+
+# this is a similar class rule, but for Buttons specifically
+# background_down is the image used when the button is pressed
+# notice that this is using canvas.after instead of canvas.before
+# so the canvas changes are applies after the button attributes
+<Button>:
+    font_size: 56
+    background_normal: ""
+    background_down: 'atlas://data/images/defaulttheme/button'
+    canvas.after:
+        Color:
+            rgba: 0, 0, 0, 1
+        Line:
+            rectangle: self.x + 1, self.y + 1, self.width - 1, self.height - 1
+
+
 BoxLayout:
     orientation: "vertical"
     BoxLayout:
