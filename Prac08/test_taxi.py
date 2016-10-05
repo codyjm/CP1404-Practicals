@@ -1,7 +1,7 @@
 """
 For testing taxi.py
 """
-from Prac08.taxi import Taxi, UnreliableCar
+from Prac08.taxi import Taxi, UnreliableCar, SilverServiceTaxi
 
 
 def main():
@@ -22,6 +22,12 @@ def main():
     test_unrel = UnreliableCar("UnrelCar", 100, 60)
     print("{} : Reliability: {}".format(test_unrel, test_unrel.reliability))
     test_unrel.drive(40)
-    print("{} : Reliability: {}".format(test_unrel, test_unrel.reliability))
+    print("{} : Reliability: {}\n".format(test_unrel, test_unrel.reliability))
+
+    # test SilverServiceTaxi class
+    test_silver = SilverServiceTaxi("SilverTaxi", 100, 2)
+    print(test_silver)
+    test_silver.drive(10)
+    print("Current fare: ${:.2f}".format(test_silver.get_fare()))
 
 main()

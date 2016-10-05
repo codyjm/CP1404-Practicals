@@ -80,3 +80,22 @@ class UnreliableCar(Car):
             return distance_driven
         else:
             return self.odometer
+
+
+class SilverServiceTaxi(Taxi):
+    """ specialised version of Taxi class, which inherits from Car class, price_per_km based on fanciness """
+    # class variable for extra charge fee for each new fare
+    flagfall = 4.50
+
+    def __init__(self, name, fuel, fanciness):
+        """ initialise SilverServiceTaxi instance, based on parent class Taxi and Car """
+        super().__init__(name, fuel)
+        self.fanciness = fanciness
+        self.price_per_km = Taxi.price_per_km * fanciness
+
+    def __str__(self):
+        return "{} plus flagfall of $4.50".format(super().__str__(), self.flagfall)
+
+    def get_fare(self):
+        """ same as Taxi.get_fare, adds flagfall cost as well """
+        return (self.price_per_km * self.current_fare_distance) + self.flagfall
