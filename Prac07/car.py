@@ -5,7 +5,7 @@ Car class example
 
 
 class Car:
-    def __init__(self, name="car", fuel=0):
+    def __init__(self, name="", fuel=0):
         """ initialise a Car instance
         fuel: float, one unit of fuel drives one kilometre """
         self.fuel = fuel
